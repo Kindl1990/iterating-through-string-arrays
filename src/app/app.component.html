@@ -20,7 +20,13 @@
 
       <!-- Angular knows that the 'index' keyword is the index of each iteration as we loop through the array.-->
       <div *ngFor='let program of programmingLanguages; let i=index'> 
-      {{i}}. {{program}}
+        {{i}}. {{program}}
+      </div>
+
+    <h1>Iterating through own shape of data (interface)</h1>
+
+      <div *ngFor="let shoe of shoes">
+        {{shoe.brand}}  with a color {{shoe.color}}
       </div>
 
   </body>
