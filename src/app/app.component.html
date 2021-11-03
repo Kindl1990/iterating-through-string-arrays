@@ -8,11 +8,20 @@
   </head>
   <body>
     
-    <!-- ngFor command in the view to loop through arrays declared in the component -->
-
-    <div *ngFor='let program of programmingLanguages'> 
+    <h1>Iterating through array without index</h1>
+      
+      <!-- ngFor command in the view to loop through arrays declared in the component -->
+      <div *ngFor='let program of programmingLanguages'> 
       {{program}} <!-- interpolation-->
-    </div>
+      </div>
     
+    <!-- index within each iteration of the loop -->
+    <h1>Iterating through array with index</h1>
+
+      <!-- Angular knows that the 'index' keyword is the index of each iteration as we loop through the array.-->
+      <div *ngFor='let program of programmingLanguages; let i=index'> 
+      {{i}}. {{program}}
+      </div>
+
   </body>
 </html>
